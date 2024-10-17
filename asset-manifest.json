@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/patchrobowars.github.io/static/css/main.f855e6bc.css",
-    "main.js": "/patchrobowars.github.io/static/js/main.0552f322.js",
-    "static/js/453.993d83e6.chunk.js": "/patchrobowars.github.io/static/js/453.993d83e6.chunk.js",
-    "static/media/logo.svg": "/patchrobowars.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/patchrobowars.github.io/static/css/main.5342d64e.css",
+    "main.js": "/patchrobowars.github.io/static/js/main.ae9a5805.js",
+    "static/media/img-2.jpg": "/patchrobowars.github.io/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
+    "static/media/img-1.jpg": "/patchrobowars.github.io/static/media/img-1.53f4843759ebec256cb9.jpg",
+    "static/media/img-8.jpg": "/patchrobowars.github.io/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
     "index.html": "/patchrobowars.github.io/index.html",
-    "main.f855e6bc.css.map": "/patchrobowars.github.io/static/css/main.f855e6bc.css.map",
-    "main.0552f322.js.map": "/patchrobowars.github.io/static/js/main.0552f322.js.map",
-    "453.993d83e6.chunk.js.map": "/patchrobowars.github.io/static/js/453.993d83e6.chunk.js.map"
+    "main.5342d64e.css.map": "/patchrobowars.github.io/static/css/main.5342d64e.css.map",
+    "main.ae9a5805.js.map": "/patchrobowars.github.io/static/js/main.ae9a5805.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.0552f322.js"
+    "static/css/main.5342d64e.css",
+    "static/js/main.ae9a5805.js"
   ]
 }
