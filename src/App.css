@@ -1,10 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General Reset and Font */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* Overlay with Hero Background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/hero.webp'); /* Replace with actual hero background path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Dark Overlay Layer for Readability */
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: -1;
+}
+
+/* Popup Form Container with Dark Theme */
+.form-container {
+  max-width: 500px;
+  padding: 30px;
+  background: #1a1a1b; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+  transform: translateY(-20px); /* Initial position for animation */
+  opacity: 0;
+  animation: popup 0.3s forwards ease-in-out;
+  position: relative;
+  z-index: 1000;
+  color: #f0f0f0; /* Light text */
+}
+
+/* Popup Animation */
+@keyframes popup {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Form Header and Description */
+h1 {
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-description {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #b0b0b0; /* Muted color */
+  font-size: 1rem;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #c0c0c0; /* Light color for labels */
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background: #333; /* Dark input background */
+  border: 1px solid #444; /* Dark border */
+  border-radius: 4px;
+  font-size: 16px;
+  color: #e0e0e0;
+  transition: border 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #777; /* Muted placeholder color */
+}
+
+.form-group input:focus {
+  border-color: #3f81e3; /* Blue accent on focus */
+  outline: none;
+}
+
+/* Submit Button with Blue Accent */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3f81e3; /* Blue accent color */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.submit-button:hover {
+  background-color: #306bb3;
+}
+
+/* Close Button with Subtle Effect */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #888;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ffffff;
+}
+
+/* General Flex Containers for Sections */
 .home,
 .services,
 .products,
@@ -14,6 +157,7 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  color: #fff;
 }
 
 .services {
@@ -21,17 +165,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
 }
 
 .products {
   background-image: url('./images/img-1.jpg');
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
 }
 
 .sign-up {
@@ -39,29 +179,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
 }
 
 .App {
-  font-family: sans-serif;
   text-align: center;
-}
-.form{
-  display: flex;
-  flex-direction: column;
-  padding: 20px
-}
-
-.form input {
-  height: 50px;
-  margin-top: 20px;
-  border-radius: 10px;
-  padding: 5px;
-
-}
-
-.form :last-child{
-  width: 30%;
-  background-color: green;
 }
