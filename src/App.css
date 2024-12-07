@@ -168,7 +168,8 @@ h1 {
 }
 
 .products {
-  background-image: url('./images/img-1.jpg');
+  background-image: url('./images/IMG_20240511_202539392.jpg');
+  text-shadow: 10px 10px 16px rgb(0, 0, 0);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

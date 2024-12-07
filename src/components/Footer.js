@@ -10,7 +10,7 @@ function Footer() {
           <div className='social-icons'>
             <a
               className='social-icon-link email'
-              href='mailto:alex@dogpatchlabs.com'
+              href='mailto:operations@patchrobowars.com'
               aria-label='Email'
             >
               <i className='fas fa-envelope' />

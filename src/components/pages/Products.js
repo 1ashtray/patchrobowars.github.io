@@ -7,8 +7,7 @@ import Footer from '../Footer';
 export default function Products() {
   return (
     <>
-      <h1 className='products'>ABOUT</h1>
-      <Cards />
+      <h1 className='products'>More Information Coming Soon!</h1>
       <Footer />
     </>
   );
