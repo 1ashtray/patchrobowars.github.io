@@ -7,7 +7,7 @@ import { RulesSection } from "@/components/rules-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { ParticipantBenefits } from "@/components/participant-benefits"
 import { Button } from "@/components/ui/button"
-import { ChevronRight, Info, Trophy, Users, Shield } from "lucide-react"
+import { ChevronRight, Info } from "lucide-react"
 
 export default function Home() {
   // Launch date - set this to your actual launch date
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Competition, Community, Innovation boxes removed */}
       <section id="about" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
@@ -98,37 +98,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="bg-gray-800 rounded-xl p-6 transform transition-transform hover:scale-105">
-              <div className="bg-orange-900/30 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Trophy className="h-6 w-6 text-orange-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Competition</h3>
-              <p className="text-gray-300">
-                Battle your robot against others in a knockout tournament format with prizes for the winners.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 rounded-xl p-6 transform transition-transform hover:scale-105">
-              <div className="bg-orange-900/30 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-orange-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Community</h3>
-              <p className="text-gray-300">
-                Join a thriving community of robot enthusiasts, engineers, and makers from around the world.
-              </p>
-            </div>
-
-            <div className="bg-gray-800 rounded-xl p-6 transform transition-transform hover:scale-105">
-              <div className="bg-orange-900/30 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-orange-500" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
-              <p className="text-gray-300">
-                Showcase your engineering skills and innovative designs in a competitive environment.
-              </p>
-            </div>
-          </div>
+          {/* Competition, Community, Innovation boxes removed as requested */}
 
           {/* Add the ParticipantBenefits component */}
           <div className="mt-16">
