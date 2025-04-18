@@ -11,7 +11,7 @@ export default function SignupPage() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Register for RoboWars</h1>
-          <div className="w-20 h-1 bg-red-600 mb-6"></div>
+          <div className="w-20 h-1 bg-orange-600 mb-6"></div>
           <p className="max-w-3xl text-gray-300 text-lg">
             Fill out the form below to register your team for the upcoming RoboWars battlebot competition.
           </p>

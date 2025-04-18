@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -16,9 +17,16 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">
-              ROBOWARS
+          <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/placeholder.svg?height=32&width=32"
+              alt="Patch Logo"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">
+              PATCH ROBOWARS
             </span>
           </Link>
 
@@ -33,10 +41,10 @@ export function Navbar() {
             <Link href="/#rules" className="text-gray-300 hover:text-white transition-colors">
               Rules
             </Link>
-            <Link href="/#arena" className="text-gray-300 hover:text-white transition-colors">
-              Arena
+            <Link href="/#past-competition" className="text-gray-300 hover:text-white transition-colors">
+              Past Winners
             </Link>
-            <Button asChild variant="default" className="bg-red-600 hover:bg-red-700 text-white">
+            <Button asChild variant="default" className="bg-orange-600 hover:bg-orange-700 text-white min-w-[120px]">
               <Link href="/signup">Register</Link>
             </Button>
           </nav>
@@ -65,10 +73,14 @@ export function Navbar() {
             <Link href="/#rules" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
               Rules
             </Link>
-            <Link href="/#arena" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
-              Arena
+            <Link
+              href="/#past-competition"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={toggleMenu}
+            >
+              Past Winners
             </Link>
-            <Button asChild variant="default" className="bg-red-600 hover:bg-red-700 text-white w-full">
+            <Button asChild variant="default" className="bg-orange-600 hover:bg-orange-700 text-white w-full">
               <Link href="/signup" onClick={toggleMenu}>
                 Register
               </Link>

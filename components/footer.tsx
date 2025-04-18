@@ -1,5 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Instagram, Youtube, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function Footer() {
   return (
@@ -7,28 +9,25 @@ export function Footer() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">
+            <Link href="/" className="inline-flex items-center space-x-3">
+              <div className="h-8 w-8 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Patch_logo-svavpUUgfsSsrjLtP5crzmcoULHiqX.png"
+                  alt="Patch Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">
                 ROBOWARS
               </span>
             </Link>
             <p className="text-gray-400">The ultimate battlebot competition where engineering meets combat.</p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Youtube size={20} />
-                <span className="sr-only">YouTube</span>
               </Link>
             </div>
           </div>
@@ -52,8 +51,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#arena" className="text-gray-400 hover:text-white transition-colors">
-                  Arena
+                <Link href="/#past-competition" className="text-gray-400 hover:text-white transition-colors">
+                  Past Winners
                 </Link>
               </li>
               <li>
@@ -69,22 +68,12 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                   Build Tips
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                   Past Winners
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Media Kit
                 </Link>
               </li>
             </ul>
@@ -96,10 +85,19 @@ export function Footer() {
               <li className="flex items-center text-gray-400">
                 <Mail size={16} className="mr-2" />
                 <a href="mailto:info@robowars.com" className="hover:text-white transition-colors">
-                  info@robowars.com
+                  operations@patchrobowars.com
                 </a>
               </li>
             </ul>
+            <div className="mt-6">
+              <Button
+                asChild
+                variant="outline"
+                className="mechanical-btn border-orange-600 text-white hover:bg-orange-950 min-w-[120px]"
+              >
+                <Link href="#">Contact Us</Link>
+              </Button>
+            </div>
           </div>
         </div>
 

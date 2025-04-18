@@ -24,7 +24,7 @@ export function SignupForm() {
       {/* Tally Form Embed */}
       <div className="w-full h-[800px] rounded-lg overflow-hidden">
         <iframe
-          src="about:blank" // Replace with your actual Tally form URL
+          src="https://tally.so/embed/3xzyMv?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1" // Replace with your actual Tally form URL
           width="100%"
           height="100%"
           frameBorder="0"
@@ -45,104 +45,6 @@ export function SignupForm() {
 
         <div className="space-y-6">
           {formStep === 0 && (
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Team Information</h4>
-
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="team-name">Team Name</Label>
-                    <Input id="team-name" placeholder="Enter your team name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="weight-class">Weight Class</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select weight class" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="heavyweight">Heavyweight (220 lbs)</SelectItem>
-                        <SelectItem value="middleweight">Middleweight (120 lbs)</SelectItem>
-                        <SelectItem value="lightweight">Lightweight (60 lbs)</SelectItem>
-                        <SelectItem value="featherweight">Featherweight (30 lbs)</SelectItem>
-                        <SelectItem value="antweight">Antweight (1 lb)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="team-description">Team Description</Label>
-                  <Textarea id="team-description" placeholder="Tell us about your team" rows={3} />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="team-location">Team Location</Label>
-                  <Input id="team-location" placeholder="City, State/Province, Country" />
-                </div>
-              </div>
-
-              <Button onClick={nextStep} className="w-full bg-red-600 hover:bg-red-700 text-white">
-                Next: Robot Information
-              </Button>
-            </div>
-          )}
-
-          {formStep === 1 && (
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Robot Information</h4>
-
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="robot-name">Robot Name</Label>
-                    <Input id="robot-name" placeholder="Enter your robot name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="robot-weight">Robot Weight (lbs)</Label>
-                    <Input id="robot-weight" type="number" placeholder="Enter weight in pounds" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="robot-description">Robot Description</Label>
-                  <Textarea
-                    id="robot-description"
-                    placeholder="Describe your robot and its weapons/features"
-                    rows={3}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="primary-weapon">Primary Weapon Type</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select weapon type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="spinner">Spinner</SelectItem>
-                      <SelectItem value="flipper">Flipper</SelectItem>
-                      <SelectItem value="crusher">Crusher</SelectItem>
-                      <SelectItem value="hammer">Hammer</SelectItem>
-                      <SelectItem value="saw">Saw</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <Button onClick={prevStep} variant="outline" className="flex-1">
-                  Previous
-                </Button>
-                <Button onClick={nextStep} className="flex-1 bg-red-600 hover:bg-red-700 text-white">
-                  Next: Contact Information
-                </Button>
-              </div>
-            </div>
-          )}
-
-          {formStep === 2 && (
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white">Contact Information</h4>
 
@@ -205,10 +107,16 @@ export function SignupForm() {
               </div>
 
               <div className="flex gap-4">
-                <Button onClick={prevStep} variant="outline" className="flex-1">
+                <Button
+                  onClick={prevStep}
+                  variant="outline"
+                  className="mechanical-btn flex-1 border-orange-600 text-white hover:bg-orange-950 min-w-[120px]"
+                >
                   Previous
                 </Button>
-                <Button className="flex-1 bg-red-600 hover:bg-red-700 text-white">Submit Registration</Button>
+                <Button className="mechanical-btn flex-1 bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]">
+                  Submit Registration
+                </Button>
               </div>
             </div>
           )}

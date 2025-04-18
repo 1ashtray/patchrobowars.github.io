@@ -10,7 +10,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 0 72.2% 50.6%;
+    --primary: 24 94.5% 53.1%;
     --primary-foreground: 0 85.7% 97.3%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 24 94.5% 53.1%;
     --radius: 0.5rem;
   }
 
@@ -33,7 +33,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 72.2% 50.6%;
+    --primary: 24 94.5% 53.1%;
     --primary-foreground: 0 85.7% 97.3%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -45,7 +45,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 0 72.2% 50.6%;
+    --ring: 24 94.5% 53.1%;
   }
 }
 
@@ -72,5 +72,60 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Mechanical button effect */
+.mechanical-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mechanical-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff7300, #ff9d00, #ffb700, #ff7300);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: none;
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mechanical-btn:hover::before {
+  opacity: 1;
+  animation: gradient 3s ease infinite;
+}
+
+.mechanical-btn:hover {
+  transform: translateY(-1px);
+  animation: vibrate 0.15s linear infinite;
+  box-shadow: 0 0 15px rgba(255, 115, 0, 0.5);
+}
+
+.mechanical-btn:active {
+  transform: translateY(1px);
+  animation: none;
+}
+
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  75% {
+    transform: translateX(-1px);
   }
 }
