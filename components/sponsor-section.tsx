@@ -27,7 +27,7 @@ export function SponsorSection() {
               {/* Logo as title */}
               <div className="mb-8">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Patchlogo-TM8xJhfqh6soXH5p4leYvYFarNThah.png"
                   alt="Patch Logo"
                   width={200}
                   height={200}
@@ -53,7 +53,11 @@ export function SponsorSection() {
                 </div>
 
                 <div className="pt-4">
-                  <Button asChild variant="default" className="bg-orange-600 hover:bg-orange-700 text-white group">
+                  <Button
+                    asChild
+                    variant="default"
+                    className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white group"
+                  >
                     <Link
                       href="https://joinpatch.org"
                       target="_blank"

@@ -38,7 +38,10 @@ export function RulesSection() {
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">All remotes / wireless controls must be configured to enter a failsafe mode upon loss of connection, in which all bot systems are turned off / stopped</span>
+                  <span className="text-gray-300">
+                    All remotes / wireless controls must be configured to enter a failsafe mode upon loss of connection,
+                    in which all bot systems are turned off / stopped
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -73,7 +76,9 @@ export function RulesSection() {
                 </li>
                 <li className="flex items-start">
                   <AlertTriangle className="h-5 w-5 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300">Projectile weapons with the range to hit a person above waist height</span>
+                  <span className="text-gray-300">
+                    Projectile weapons with the range to hit a person above waist height
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <AlertTriangle className="h-5 w-5 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -85,8 +90,6 @@ export function RulesSection() {
 
           <div>
             <Accordion type="single" collapsible className="w-full">
-            
-
               <AccordionItem value="item-2" className="border-b border-gray-700">
                 <AccordionTrigger className="text-white hover:text-orange-400 text-lg font-medium py-4">
                   Match Format
@@ -96,9 +99,7 @@ export function RulesSection() {
                     Matches are 10 minutes in length. If neither robot is knocked out during this time, the winner will
                     be determined by a panel of judges based on damage, aggression, and control.
                   </p>
-                  <p className="mt-2">
-                    Tournament structure is yet to be decided
-                  </p>
+                  <p className="mt-2">Tournament structure is yet to be decided</p>
                 </AccordionContent>
               </AccordionItem>
 
@@ -114,7 +115,11 @@ export function RulesSection() {
                     <li>All robots must pass a safety inspection before competing</li>
                     <li>All bots must have a kill switch connected in series with battery connections</li>
                     <li>All bots must have a kill switch connected in series with battery connections</li>
-                    <li>All teams must pass a technical inspection by submitting their bot to the judges for inspection in three categories: Physical design/internal layout, Electronic design/schematic, any custom PCBs if applicable</li>
+                    <li>
+                      All teams must pass a technical inspection by submitting their bot to the judges for inspection in
+                      three categories: Physical design/internal layout, Electronic design/schematic, any custom PCBs if
+                      applicable
+                    </li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -124,7 +129,11 @@ export function RulesSection() {
                   Judging Criteria
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 pb-4">
-                  <p className="mt-2"> In the case of niether bot being knocked out, we will have a panel of judges determing the winner according to judging criteria which is tbd </p>
+                  <p className="mt-2">
+                    {" "}
+                    In the case of niether bot being knocked out, we will have a panel of judges determing the winner
+                    according to judging criteria which is tbd{" "}
+                  </p>
                 </AccordionContent>
               </AccordionItem>
 

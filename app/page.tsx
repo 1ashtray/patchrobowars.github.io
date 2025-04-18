@@ -26,13 +26,17 @@ export default function Home() {
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
           {/* Increased top margin to push title higher */}
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 mb-32">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-32">
             ROBOWARS
           </h1>
 
           {/* Added mt-auto to push buttons to bottom of container */}
           <div className="flex flex-col sm:flex-row gap-4 mt-auto mb-16">
-            <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]">
+            <Button
+              asChild
+              size="lg"
+              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]"
+            >
               <Link href="/signup">
                 Register Interest Now
                 <ChevronRight className="ml-2 h-4 w-4" />
@@ -42,7 +46,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-orange-600 text-white hover:bg-orange-950 min-w-[140px]"
+              className="mechanical-btn border-orange-600 text-white hover:bg-orange-950 min-w-[140px]"
             >
               <Link href="#about">
                 Learn More
@@ -151,7 +155,11 @@ export default function Home() {
             <p className="max-w-2xl text-gray-300 text-lg mb-8">
               Register your team today and start building your battlebot for the ultimate robot combat experience!
             </p>
-            <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white min-w-[150px]">
+            <Button
+              asChild
+              size="lg"
+              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[150px]"
+            >
               <Link href="/signup">
                 Register Now
                 <ChevronRight className="ml-2 h-4 w-4" />

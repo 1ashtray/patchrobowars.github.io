@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Instagram, Youtube, Mail } from "lucide-react"
+import { Instagram, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Footer() {

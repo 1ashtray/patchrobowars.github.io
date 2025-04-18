@@ -8,10 +8,9 @@ export function ParticipantBenefits() {
           <Cpu className="h-6 w-6 text-orange-500" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Transmitter & Receiver</h3>
+          <h3 className="text-lg font-semibold text-white mb-2">Transmitter, Receiver and Battery</h3>
           <p className="text-gray-300">
-            Each team receives a professional-grade transmitter and receiver set to control their battlebot with
-            precision during combat.
+            Each team receives a flysky fsi6x transmitter, a iA10B receiver, LG h2 18650 batteries,
           </p>
         </div>
       </div>
@@ -36,8 +35,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Workspace</h3>
           <p className="text-gray-300">
-            Access to dedicated building space equipped with essential tools and equipment to design, build, and test
-            your battlebot.
+            Access to dogpatch labs every saturday or sunday depending on when most people are free.
           </p>
         </div>
       </div>
@@ -47,11 +45,8 @@ export function ParticipantBenefits() {
           <Printer className="h-6 w-6 text-orange-500" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">3D Printing</h3>
-          <p className="text-gray-300">
-            Teams can utilize 3D printers to create custom parts, protective casings, and unique design elements for
-            their battlebots.
-          </p>
+          <h3 className="text-lg font-semibold text-white mb-2">A few tools</h3>
+          <p className="text-gray-300">We do not have everythi</p>
         </div>
       </div>
     </div>

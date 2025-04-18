@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { Trophy, Zap, ChevronLeft, ChevronRight, PenTool } from "lucide-react"
+import { Trophy, Zap, PenToolIcon as Tool } from "lucide-react"
 
 const slideImages = [
   {
@@ -67,7 +67,7 @@ export function PastCompetitionSection() {
           <div className="bg-black/50 rounded-xl overflow-hidden border border-orange-900/30 transition-transform hover:scale-105">
             <div className="relative h-80">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PXL_20240511_172204411.jpg-9FDZuK3zfK3ufn2DppCIUXhnshQqqB.jpeg"
                 alt="Battlebot Internal Components"
                 fill
                 className="object-cover"
@@ -78,7 +78,7 @@ export function PastCompetitionSection() {
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
-                <PenTool className="h-5 w-5 text-orange-500 mr-2" />
+                <Tool className="h-5 w-5 text-orange-500 mr-2" />
                 <h3 className="text-xl font-bold text-white">Precision Engineering</h3>
               </div>
               <p className="text-gray-300 mb-4">
@@ -98,7 +98,7 @@ export function PastCompetitionSection() {
           <div className="bg-black/50 rounded-xl overflow-hidden border border-orange-900/30 transition-transform hover:scale-105">
             <div className="relative h-80">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20240511_203028864.jpg-kP0pk9tRAxXbyhFKtvkS9M8dxk9CAb.jpeg"
                 alt="Battlebot Shell with Signatures"
                 fill
                 className="object-cover"
@@ -122,88 +122,6 @@ export function PastCompetitionSection() {
                 <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Lightweight</span>
                 <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Team Project</span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Design Inspiration Section */}
-        <div className="bg-black/30 rounded-xl p-8 border border-orange-900/20 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Design Inspiration</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-black/50 rounded-lg p-5 border border-gray-800">
-              <h4 className="text-lg font-semibold text-white mb-2">Innovative Weapons</h4>
-              <p className="text-gray-300">
-                From spinning discs to pneumatic flippers, our competitors have showcased a wide range of creative
-                weapon systems.
-              </p>
-            </div>
-            <div className="bg-black/50 rounded-lg p-5 border border-gray-800">
-              <h4 className="text-lg font-semibold text-white mb-2">Defensive Strategies</h4>
-              <p className="text-gray-300">
-                Some of the most successful bots feature innovative armor designs that can withstand powerful attacks
-                while maintaining mobility.
-              </p>
-            </div>
-            <div className="bg-black/50 rounded-lg p-5 border border-gray-800">
-              <h4 className="text-lg font-semibold text-white mb-2">Electronic Integration</h4>
-              <p className="text-gray-300">
-                Advanced control systems and custom PCBs have given competitors precise control over their battlebots
-                during intense matches.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Professional Slideshow */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Battle Highlights</h3>
-
-          <div className="relative rounded-xl overflow-hidden aspect-[16/9] max-w-5xl mx-auto shadow-2xl">
-            {/* Slideshow */}
-            <div className="relative w-full h-full">
-              {slideImages.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
-                  }`}
-                >
-                  <Image src={slide.src || "/placeholder.svg"} alt={slide.alt} fill className="object-cover" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                    <p className="text-white text-lg font-medium">{slide.caption}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Navigation arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={24} />
-            </button>
-
-            {/* Slide indicators */}
-            <div className="absolute bottom-20 left-0 right-0 flex justify-center gap-2">
-              {slideImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentSlide ? "bg-white scale-125" : "bg-white/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
             </div>
           </div>
         </div>
