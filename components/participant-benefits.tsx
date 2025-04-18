@@ -10,7 +10,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Transmitter, Receiver and Battery</h3>
           <p className="text-gray-300">
-            Each team receives a flysky fsi6x transmitter, a iA10B receiver, LG h2 18650 batteries,
+            Each team receives a flysky FS-i6x transmitter, a iA10B receiver, 3x 18650 battery cells, 3.7v 300mHh, with a holder for 3s configuration.
           </p>
         </div>
       </div>
@@ -22,7 +22,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Funding</h3>
           <p className="text-gray-300">
-            Teams are provided with financial support to purchase materials, components, and tools needed to build their
+            Teams are provided with financial support of to purchase materials, components, and tools needed to build their
             competitive robot.
           </p>
         </div>
@@ -35,7 +35,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Workspace</h3>
           <p className="text-gray-300">
-            Access to dogpatch labs every saturday or sunday depending on when most people are free.
+            Access to Dogpatch labs every Saturday or Sunday depending on when most people are free.
           </p>
         </div>
       </div>
@@ -45,8 +45,8 @@ export function ParticipantBenefits() {
           <Printer className="h-6 w-6 text-orange-500" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">A few tools</h3>
-          <p className="text-gray-300">We do not have everythi</p>
+          <h3 className="text-lg font-semibold text-white mb-2">Night Outs</h3>
+          <p className="text-gray-300">Fun night outs with free food on Launch day and FIght Night</p>
         </div>
       </div>
     </div>

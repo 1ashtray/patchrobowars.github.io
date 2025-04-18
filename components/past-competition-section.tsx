@@ -199,25 +199,17 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute top-4 left-4 bg-orange-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                Engineering Excellence
-              </div>
+
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <Tool className="h-5 w-5 text-orange-500 mr-2" />
-                <h3 className="text-xl font-bold text-white">Precision Engineering</h3>
+                <h3 className="text-xl font-bold text-white">Super Sucker</h3>
               </div>
               <p className="text-gray-300 mb-4">
-                This battlebot showcases meticulous internal component layout with a powerful motor system, custom PCB
-                integration, and a high-capacity battery pack. The precision-machined chassis provides optimal weight
-                distribution and durability.
+                
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Custom Electronics</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Dual Motors</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Modular Design</span>
-              </div>
+
             </div>
           </div>
 
@@ -230,25 +222,17 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute top-4 left-4 bg-orange-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                Team Collaboration
-              </div>
+
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <Zap className="h-5 w-5 text-orange-500 mr-2" />
-                <h3 className="text-xl font-bold text-white">Lucy Daisy</h3>
+                <h3 className="text-xl font-bold text-white">Shreckbot</h3>
               </div>
               <p className="text-gray-300 mb-4">
-                This distinctive green shell features the signatures of team members Aditya, Joshi, Abutalha, and others
-                who collaborated on this innovative design. The spiked exterior provides both offensive capability and
-                defensive protection.
+
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Spiked Armor</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Lightweight</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Team Project</span>
-              </div>
+
             </div>
           </div>
 
@@ -261,9 +245,7 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute top-4 left-4 bg-orange-600 text-white text-sm font-bold px-3 py-1 rounded-full">
-                Crowd Favorite
-              </div>
+
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
@@ -271,15 +253,8 @@ export function PastCompetitionSection() {
                 <h3 className="text-xl font-bold text-white">Peter the Piss Bot</h3>
               </div>
               <p className="text-gray-300 mb-4">
-                With its distinctive "DANGER PISS:TON!!!" warning emblazoned on its armor, this battlebot combines humor
-                with serious combat capability. The sleek metallic top surface and reinforced edges make it both a
-                crowd-pleaser and a formidable opponent in the arena.
+
               </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Hydraulic System</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Armored Shell</span>
-                <span className="bg-gray-800 text-orange-400 text-xs px-2 py-1 rounded">Crowd Favorite</span>
-              </div>
             </div>
           </div>
         </div>
