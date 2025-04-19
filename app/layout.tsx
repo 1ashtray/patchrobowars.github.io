@@ -11,6 +11,10 @@ export const metadata = {
   title: "RoboWars - The Ultimate Battlebot Competition",
   description:
     "Join the premier battlebot competition where engineering meets combat. Design, build, and battle your custom robot in an arena of destruction.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
     generator: 'v0.dev'
 }
 
