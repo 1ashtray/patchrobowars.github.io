@@ -24,7 +24,7 @@ export function SignupForm() {
       {/* Tally Form Embed */}
       <div className="w-full h-[800px] rounded-lg overflow-hidden">
         <iframe
-          src="https://tally.so/embed/3xzyMv?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1" // Replace with your actual Tally form URL
+          src="https://tally.so/r/mOVgNM?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1" // Replace with your actual Tally form URL
           width="100%"
           height="100%"
           frameBorder="0"
