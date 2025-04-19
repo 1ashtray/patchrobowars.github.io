@@ -10,7 +10,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Transmitter, Receiver and Battery</h3>
           <p className="text-gray-300">
-            Each team receives a flysky FS-i6x transmitter, a iA10B receiver, 3x 18650 battery cells, 3.7v 300mHh, with a holder for 3s configuration.
+            Each team receives a flysky FS-i6x transmitter, a iA10B receiver, 3x 18650 battery cells at 3.7v 3000mAh each, with a holder for 3s configuration.
           </p>
         </div>
       </div>
@@ -22,7 +22,7 @@ export function ParticipantBenefits() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Funding</h3>
           <p className="text-gray-300">
-            Teams are provided with financial support of to purchase materials, components, and tools needed to build their
+            Teams will be provided with financial support to purchase materials, components, and tools needed to build their
             competitive robot.
           </p>
         </div>

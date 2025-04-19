@@ -38,7 +38,7 @@ export default function Home() {
               className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]"
             >
               <Link href="/signup">
-                Register Interest Now
+                Sign Up Now
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
