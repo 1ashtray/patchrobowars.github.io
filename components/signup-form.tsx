@@ -22,15 +22,16 @@ export function SignupForm() {
   return (
     <div>
       {/* Tally Form Embed */}
-      <div className="w-full h-[800px] rounded-lg overflow-hidden">
+      <div className="w-full max-w-3xl mx-auto h-[800px] rounded-lg overflow-hidden">
         <iframe
-          src="https://tally.so/r/mOVgNM?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1" // Replace with your actual Tally form URL
+          src="https://tally.so/r/mOVgNM?alignLeft=0&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           width="100%"
           height="100%"
           frameBorder="0"
           marginHeight={0}
           marginWidth={0}
           title="RoboWars Registration Form"
+          className="mx-auto"
         >
           Loading…
         </iframe>

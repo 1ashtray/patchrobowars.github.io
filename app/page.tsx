@@ -6,15 +6,16 @@ import { SponsorSection } from "@/components/sponsor-section"
 import { RulesSection } from "@/components/rules-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { ParticipantBenefits } from "@/components/participant-benefits"
+import { TimelineSection } from "@/components/timeline-section"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Info } from "lucide-react"
 
 export default function Home() {
   // Launch date - set this to your actual launch date
-  const launchDate = new Date("2025-05-02T14:00:00")
+  const launchDate = new Date("2025-05-03T14:00:00")
 
   // Event date - set this to your actual event date
-  const eventDate = new Date("2025-06-26T20:00:00")
+  const eventDate = new Date("2025-05-05T20:00:00")
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -107,6 +108,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Timeline Section - NEW */}
+      <TimelineSection />
 
       {/* Sponsors Section */}
       <SponsorSection />

@@ -27,6 +27,9 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
+            <Link href="/#timeline" className="text-gray-300 hover:text-white transition-colors">
+              Timeline
+            </Link>
             <Link href="/#sponsors" className="text-gray-300 hover:text-white transition-colors">
               Sponsors
             </Link>
@@ -58,6 +61,13 @@ export function Navbar() {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
               About
+            </Link>
+            <Link
+              href="/#timeline"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={toggleMenu}
+            >
+              Timeline
             </Link>
             <Link
               href="/#sponsors"
