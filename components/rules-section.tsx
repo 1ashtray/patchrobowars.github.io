@@ -109,11 +109,10 @@ export function RulesSection() {
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 pb-4">
                   <ul className="space-y-2">
-                    <li>All robots must have a remote kill switch accessible to the referee</li>
-                    <li>Maximum Weight: 5kg</li>
-                    <li>Robots must be ready to compete within 5 minutes of being called</li>
-                    <li>All robots must pass a safety inspection before competing</li>
-                    <li>All bots must have a kill switch connected in series with battery connections</li>
+                    <li>All bots must have a remote kill switch accessible to the referee</li>
+                    <li>Maximum Weight: 10kg</li>
+                    <li>Bots must be ready to compete within 5 minutes of being called</li>
+                    <li>All bots must pass a safety inspection before competing</li>
                     <li>All bots must have a kill switch connected in series with battery connections</li>
                     <li>
                       All teams must pass a technical inspection by submitting their bot to the judges for inspection in

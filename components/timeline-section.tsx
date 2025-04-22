@@ -36,7 +36,10 @@ export function TimelineSection() {
                   </h3>
                   <div className="text-xl font-mono text-orange-500 mb-4">May 3rd, 2:00pm–5:00pm</div>
                   <div className="text-lg font-medium text-white mb-2">Dogpatch Labs</div>
-                  <p className="text-gray-300 mb-4">The official kickoff of RoboWars!</p>
+                  <p className="text-gray-300 mb-4">
+                    The official kickoff of RoboWars! Teams will receive their battle kits, including transmitters,
+                    receivers, and batteries.
+                  </p>
                   <div className="mt-4">
                     <h4 className="text-lg font-medium text-orange-400 mb-2">What to Expect:</h4>
                     <ul className="space-y-2 text-gray-300">
@@ -87,11 +90,26 @@ export function TimelineSection() {
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                     Build Days
                   </h3>
-                  <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday Until July 5th</div>
+                  <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday</div>
                   <p className="text-gray-300">
-                    Teams gather every Saturday at Dogpatch Labs for collaborative build sessions. Access tools, 3D
-                    printers and workspace to bring your battlebot to life.
+                    Join us every Saturday at Dogpatch Labs for collaborative build sessions. Access tools, 3D printers,
+                    and expert advice to bring your battlebot to life. These sessions are the perfect opportunity to
+                    troubleshoot issues, test components, and refine your design before the big showdown.
                   </p>
+                  <ul className="mt-4 space-y-2 text-gray-300">
+                    <li className="flex items-center">
+                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                      <span>Technical support available</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                      <span>Collaborative workspace</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                      <span>Testing opportunities</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -109,8 +127,23 @@ export function TimelineSection() {
                   <p className="text-gray-300">
                     The ultimate showdown! Battlebots will enter the arena to compete for glory and prizes. Witness
                     spectacular robot combat with crushing, flipping, and spinning weapons in action. The event includes
-                    food, music, and networking with tech enthusiasts.
+                    food, music, and networking with tech enthusiasts and potential employers.
                   </p>
+                  <div className="mt-4 text-sm text-orange-400 font-semibold">Special features:</div>
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    <div className="bg-black/30 rounded-lg p-2 text-center">
+                      <span className="text-white">Live Commentary</span>
+                    </div>
+                    <div className="bg-black/30 rounded-lg p-2 text-center">
+                      <span className="text-white">Awards Ceremony</span>
+                    </div>
+                    <div className="bg-black/30 rounded-lg p-2 text-center">
+                      <span className="text-white">Free Food & Drinks</span>
+                    </div>
+                    <div className="bg-black/30 rounded-lg p-2 text-center">
+                      <span className="text-white">Networking</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
