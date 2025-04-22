@@ -92,24 +92,9 @@ export function TimelineSection() {
                   </h3>
                   <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday</div>
                   <p className="text-gray-300">
-                    Join us every Saturday at Dogpatch Labs for collaborative build sessions. Access tools, 3D printers,
-                    and expert advice to bring your battlebot to life. These sessions are the perfect opportunity to
-                    troubleshoot issues, test components, and refine your design before the big showdown.
+                    Teams meet up every weekend in dogpatch labs to build their bots.
                   </p>
-                  <ul className="mt-4 space-y-2 text-gray-300">
-                    <li className="flex items-center">
-                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                      <span>Technical support available</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                      <span>Collaborative workspace</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                      <span>Testing opportunities</span>
-                    </li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
@@ -126,23 +111,11 @@ export function TimelineSection() {
                   <div className="text-xl font-mono text-orange-500 mb-4">July 5th, 2025</div>
                   <p className="text-gray-300">
                     The ultimate showdown! Battlebots will enter the arena to compete for glory and prizes. Witness
-                    spectacular robot combat with crushing, flipping, and spinning weapons in action. The event includes
-                    food, music, and networking with tech enthusiasts and potential employers.
+                    spectacular robot combat with crushing, flipping, and spinning weapons in action. The event includes food, music, and networking with tech enthusiasts and potential employers.
                   </p>
                   <div className="mt-4 text-sm text-orange-400 font-semibold">Special features:</div>
                   <div className="mt-2 grid grid-cols-2 gap-2">
-                    <div className="bg-black/30 rounded-lg p-2 text-center">
-                      <span className="text-white">Live Commentary</span>
-                    </div>
-                    <div className="bg-black/30 rounded-lg p-2 text-center">
-                      <span className="text-white">Awards Ceremony</span>
-                    </div>
-                    <div className="bg-black/30 rounded-lg p-2 text-center">
-                      <span className="text-white">Free Food & Drinks</span>
-                    </div>
-                    <div className="bg-black/30 rounded-lg p-2 text-center">
-                      <span className="text-white">Networking</span>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
