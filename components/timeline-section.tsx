@@ -87,7 +87,7 @@ export function TimelineSection() {
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                     Build Days
                   </h3>
-                  <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday Until May 3rd</div>
+                  <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday Until July 5th</div>
                   <p className="text-gray-300">
                     Teams gather every Saturday at Dogpatch Labs for collaborative build sessions. Access tools, 3D
                     printers and workspace to bring your battlebot to life.
@@ -105,7 +105,7 @@ export function TimelineSection() {
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                     Fight Night
                   </h3>
-                  <div className="text-xl font-mono text-orange-500 mb-4">May 5th, 2025</div>
+                  <div className="text-xl font-mono text-orange-500 mb-4">July 5th, 2025</div>
                   <p className="text-gray-300">
                     The ultimate showdown! Battlebots will enter the arena to compete for glory and prizes. Witness
                     spectacular robot combat with crushing, flipping, and spinning weapons in action. The event includes
