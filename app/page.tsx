@@ -15,7 +15,7 @@ export default function Home() {
   const launchDate = new Date("2025-05-03T14:00:00")
 
   // Event date - set this to your actual event date
-  const eventDate = new Date("2025-05-05T20:00:00")
+  const eventDate = new Date("2025-07-05T20:00:00")
 
   return (
     <div className="flex flex-col min-h-screen">
