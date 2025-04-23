@@ -92,7 +92,7 @@ export function TimelineSection() {
                   </h3>
                   <div className="text-xl font-mono text-orange-500 mb-4">Every Saturday</div>
                   <p className="text-gray-300">
-                    Teams meet up every weekend in dogpatch labs to build their bots.
+                    A space in dogpatch labs will be provided every Saturday to work in dogpatch labs. This is not mandatory, but recommended.
                   </p>
                   
                 </div>
