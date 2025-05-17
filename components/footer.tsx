@@ -46,18 +46,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#rules" className="text-gray-400 hover:text-white transition-colors">
-                  Rules
-                </Link>
-              </li>
-              <li>
                 <Link href="/#past-competition" className="text-gray-400 hover:text-white transition-colors">
                   Past Winners
-                </Link>
-              </li>
-              <li>
-                <Link href="/signup" className="text-gray-400 hover:text-white transition-colors">
-                  Register
                 </Link>
               </li>
             </ul>

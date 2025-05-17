@@ -3,17 +3,11 @@ import { BattleBotAnimation } from "@/components/battle-bot-animation"
 import { BackgroundParticles } from "@/components/background-particles"
 import { CountdownTimer } from "@/components/countdown-timer"
 import { SponsorSection } from "@/components/sponsor-section"
-import { RulesSection } from "@/components/rules-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
-import { ParticipantBenefits } from "@/components/participant-benefits"
-import { TimelineSection } from "@/components/timeline-section"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Info } from "lucide-react"
 
 export default function Home() {
-  // Launch date - set this to your actual launch date
-  const launchDate = new Date("2025-05-03T14:00:00")
-
   // Event date - set this to your actual event date
   const eventDate = new Date("2025-07-05T20:00:00")
 
@@ -26,41 +20,13 @@ export default function Home() {
           <BattleBotAnimation />
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          {/* Increased top margin to push title higher */}
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-32">
+          {/* Title */}
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
             ROBOWARS
           </h1>
 
-          {/* Added mt-auto to push buttons to bottom of container */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-auto mb-16">
-            <Button
-              asChild
-              size="lg"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[180px]"
-            >
-              <Link href="/signup">
-                Sign Up Now
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="mechanical-btn border-orange-600 text-white hover:bg-orange-950 min-w-[140px]"
-            >
-              <Link href="#about">
-                Learn More
-                <Info className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
-            <div className="bg-black/60 backdrop-blur-sm border border-orange-900/50 rounded-xl p-6">
-              <h3 className="text-lg font-medium mb-2 text-orange-400">Launch Countdown</h3>
-              <CountdownTimer targetDate={launchDate} />
-            </div>
+          {/* Fight Night Countdown - keeping only this one */}
+          <div className="mt-12 w-full max-w-md">
             <div className="bg-black/60 backdrop-blur-sm border border-orange-900/50 rounded-xl p-6">
               <h3 className="text-lg font-medium mb-2 text-orange-400">Fight Night Countdown</h3>
               <CountdownTimer targetDate={eventDate} />
@@ -82,10 +48,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Competition, Community, Innovation boxes removed */}
+      {/* About Section - simplified */}
       <section id="about" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center text-center mb-12">
+          <div className="flex flex-col items-center text-center">
             <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
               <Info className="h-6 w-6 text-orange-500" />
             </div>
@@ -98,25 +64,11 @@ export default function Home() {
               disable opponents in a thrilling display of strategy, engineering, and combat.
             </p>
           </div>
-
-          {/* Competition, Community, Innovation boxes removed as requested */}
-
-          {/* Add the ParticipantBenefits component */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">What We Provide</h3>
-            <ParticipantBenefits />
-          </div>
         </div>
       </section>
 
-      {/* Timeline Section - NEW */}
-      <TimelineSection />
-
       {/* Sponsors Section */}
       <SponsorSection />
-
-      {/* Rules Section */}
-      <RulesSection />
 
       {/* Past Competition Section */}
       <PastCompetitionSection />
@@ -134,8 +86,8 @@ export default function Home() {
               size="lg"
               className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[150px]"
             >
-              <Link href="/signup">
-                Register Now
+              <Link href="mailto:operations@patchrobowars.com">
+                Contact Us
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

@@ -27,14 +27,8 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            <Link href="/#timeline" className="text-gray-300 hover:text-white transition-colors">
-              Timeline
-            </Link>
             <Link href="/#sponsors" className="text-gray-300 hover:text-white transition-colors">
               Sponsors
-            </Link>
-            <Link href="/#rules" className="text-gray-300 hover:text-white transition-colors">
-              Rules
             </Link>
             <Link href="/#past-competition" className="text-gray-300 hover:text-white transition-colors">
               Past Winners
@@ -44,7 +38,7 @@ export function Navbar() {
               variant="default"
               className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[120px]"
             >
-              <Link href="/signup">Register</Link>
+              <a href="mailto:operations@patchrobowars.com">Contact</a>
             </Button>
           </nav>
 
@@ -63,21 +57,11 @@ export function Navbar() {
               About
             </Link>
             <Link
-              href="/#timeline"
-              className="text-gray-300 hover:text-white transition-colors py-2"
-              onClick={toggleMenu}
-            >
-              Timeline
-            </Link>
-            <Link
               href="/#sponsors"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
               Sponsors
-            </Link>
-            <Link href="/#rules" className="text-gray-300 hover:text-white transition-colors py-2" onClick={toggleMenu}>
-              Rules
             </Link>
             <Link
               href="/#past-competition"
@@ -91,9 +75,9 @@ export function Navbar() {
               variant="default"
               className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white w-full"
             >
-              <Link href="/signup" onClick={toggleMenu}>
-                Register
-              </Link>
+              <a href="mailto:operations@patchrobowars.com" onClick={toggleMenu}>
+                Contact
+              </a>
             </Button>
           </div>
         </div>
