@@ -217,16 +217,12 @@ export function BattleBotAnimation() {
             containerRef.current.removeChild(renderer.domElement)
           }
           // Dispose of geometries and materials
-          ;[chassisGeometry, wheelGeometry, bladeGeometry, armorGeometry, lightGeometry]
-            .forEach((geometry) => {
-              geometry.dispose()
-            })
-
-            [(chassisMaterial, wheelMaterial, bladeMaterial, armorMaterial, orangeLightMaterial)].forEach(
-              (material) => {
-                material.dispose()
-              },
-            )
+          ;[chassisGeometry, wheelGeometry, bladeGeometry, armorGeometry, lightGeometry].forEach((geometry) => {
+            geometry.dispose()
+          })
+          ;[chassisMaterial, wheelMaterial, bladeMaterial, armorMaterial, orangeLightMaterial].forEach((material) => {
+            material.dispose()
+          })
 
           renderer.dispose()
         }

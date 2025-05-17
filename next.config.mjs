@@ -8,7 +8,16 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com', 'blob.v0.dev'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blob.v0.dev',
+      }
+    ],
     unoptimized: true,
   },
 }
