@@ -14,29 +14,32 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with 3D Animation */}
-      <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+      <section className="relative w-full min-h-screen overflow-hidden bg-black text-white">
         <BackgroundParticles />
         <div className="absolute inset-0 z-0">
           <BattleBotAnimation />
         </div>
-        <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
+
+        {/* Title at top */}
+        <div className="absolute top-0 left-0 right-0 z-10 pt-24 px-4 md:px-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient text-center">
             ROBOWARS
           </h1>
+        </div>
 
-          {/* Fight Night Countdown - keeping only this one */}
-          <div className="mt-12 w-full max-w-md">
-            <div className="bg-black/60 backdrop-blur-sm border border-orange-900/50 rounded-xl p-6">
-              <h3 className="text-lg font-medium mb-2 text-orange-400">Fight Night Countdown</h3>
-              <CountdownTimer targetDate={eventDate} />
-            </div>
+        {/* Countdown centered at bottom */}
+        <div className="absolute bottom-20 left-0 right-0 z-10 flex justify-center">
+          <div className="bg-black/40 backdrop-blur-sm border border-orange-900/30 rounded-xl p-4 w-full max-w-xs">
+            <h3 className="text-sm font-medium mb-2 text-orange-400 text-center">Fight Night Countdown</h3>
+            <CountdownTimer targetDate={eventDate} />
           </div>
         </div>
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+
+        {/* Down arrow at very bottom */}
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center z-10">
           <a href="#about" className="animate-bounce">
             <svg
-              className="w-8 h-8 text-white"
+              className="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

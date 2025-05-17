@@ -11,7 +11,7 @@ export function SponsorSection() {
           <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
             <Award className="h-6 w-6 text-orange-500" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Sponsor</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What is Patch?</h2>
           <div className="w-20 h-1 bg-orange-600 mb-6"></div>
         </div>
 
