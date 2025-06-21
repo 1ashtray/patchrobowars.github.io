@@ -1,11 +1,11 @@
-import Link from "next/link"
 import { BattleBotAnimation } from "@/components/battle-bot-animation"
 import { BackgroundParticles } from "@/components/background-particles"
 import { CountdownTimer } from "@/components/countdown-timer"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
-import { Button } from "@/components/ui/button"
-import { ChevronRight, Info } from "lucide-react"
+import { FightRulesSection } from "@/components/fight-rules-section"
+import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
+import { Info, MapPin } from "lucide-react"
 
 export default function Home() {
   // Event date - set this to your actual event date
@@ -60,43 +60,42 @@ export default function Home() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What is Patch RoboWars?</h2>
             <div className="w-20 h-1 bg-orange-600 mb-6"></div>
-            <p className="max-w-3xl text-gray-300 text-lg">
+            <p className="max-w-3xl text-gray-300 text-lg mb-8">
               Patch RoboWars is a student-run battlebot competition where anyone from any background can participate.
               Each team receives a transmitter/receiver set, funding to build their robot, dedicated workspace, and
               access to 3D printers. Participants design and build their own remote-controlled machines to fight and
               disable opponents in a thrilling display of strategy, engineering, and combat.
             </p>
+
+            {/* Fight Night Location */}
+            <div className="bg-black/40 rounded-xl p-6 border border-orange-900/20 max-w-2xl">
+              <div className="flex items-center justify-center mb-4">
+                <div className="bg-orange-900/30 rounded-full p-3 mr-4">
+                  <MapPin className="h-6 w-6 text-orange-500" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Fight Night Location</h3>
+              </div>
+              <p className="text-gray-300 text-lg">
+                The ultimate showdown will take place at{" "}
+                <span className="text-orange-400 font-semibold">Dogpatch Labs</span>, where teams will battle it out in
+                an epic arena of destruction and engineering prowess.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Fight Rules Section */}
+      <FightRulesSection />
+
+      {/* Judging Criteria Section */}
+      <JudgingCriteriaSection />
 
       {/* Sponsors Section */}
       <SponsorSection />
 
       {/* Past Competition Section */}
       <PastCompetitionSection />
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Join the Battle?</h2>
-            <p className="max-w-2xl text-gray-300 text-lg mb-8">
-              Register your team today and start building your battlebot for the ultimate robot combat experience!
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[150px]"
-            >
-              <Link href="mailto:operations@patchrobowars.com">
-                Contact Us
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

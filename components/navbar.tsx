@@ -27,11 +27,11 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
+            <Link href="/#fight-rules" className="text-gray-300 hover:text-white transition-colors">
+              Fight Rules
+            </Link>
             <Link href="/#sponsors" className="text-gray-300 hover:text-white transition-colors">
               Sponsors
-            </Link>
-            <Link href="/#past-competition" className="text-gray-300 hover:text-white transition-colors">
-              Past Winners
             </Link>
             <Button
               asChild
@@ -57,18 +57,18 @@ export function Navbar() {
               About
             </Link>
             <Link
+              href="/#fight-rules"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={toggleMenu}
+            >
+              Fight Rules
+            </Link>
+            <Link
               href="/#sponsors"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
               Sponsors
-            </Link>
-            <Link
-              href="/#past-competition"
-              className="text-gray-300 hover:text-white transition-colors py-2"
-              onClick={toggleMenu}
-            >
-              Past Winners
             </Link>
             <Button
               asChild

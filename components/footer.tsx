@@ -41,13 +41,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#sponsors" className="text-gray-400 hover:text-white transition-colors">
-                  Sponsors
+                <Link href="/#fight-rules" className="text-gray-400 hover:text-white transition-colors">
+                  Fight Rules
                 </Link>
               </li>
               <li>
-                <Link href="/#past-competition" className="text-gray-400 hover:text-white transition-colors">
-                  Past Winners
+                <Link href="/#sponsors" className="text-gray-400 hover:text-white transition-colors">
+                  Sponsors
                 </Link>
               </li>
             </ul>
