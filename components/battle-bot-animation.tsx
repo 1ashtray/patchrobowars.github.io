@@ -12,30 +12,30 @@ export function BattleBotAnimation() {
       try {
         if (!containerRef.current) return
 
-        // Dynamically import Three.js
+        // Dynamically import Three.js with correct paths
         const THREE = await import("three")
-        const { OrbitControls } = await import("three/examples/jsm/controls/OrbitControls")
+        const { OrbitControls } = await import("three/addons/controls/OrbitControls.js")
 
         // Scene setup
         const scene = new THREE.Scene()
         scene.background = new THREE.Color(0x000000)
 
         // Add fog for depth
-        scene.fog = new THREE.Fog(0x000000, 10, 50)
+        scene.fog = new THREE.Fog(0x000000, 5, 25)
 
         // Get container dimensions
         const container = containerRef.current
         const containerWidth = container.clientWidth
         const containerHeight = container.clientHeight
 
-        // Camera setup - positioned to show robot on left side of container
-        const camera = new THREE.PerspectiveCamera(75, containerWidth / containerHeight, 0.1, 1000)
-        camera.position.set(-2, 2, 6) // Position to show left side of scene
-        camera.lookAt(-3, 0, 0) // Look at left side
+        // Camera setup - zoomed in closer to show the robot prominently
+        const camera = new THREE.PerspectiveCamera(60, containerWidth / containerHeight, 0.1, 1000)
+        camera.position.set(0, 3, 5) // Closer position for better view
+        camera.lookAt(0, 1, 0) // Look at the robot center
 
-        // Renderer setup - size to match container, not full window
+        // Renderer setup - size to match container
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-        renderer.setSize(containerWidth, containerHeight) // Use container size, not window size
+        renderer.setSize(containerWidth, containerHeight)
         renderer.setPixelRatio(window.devicePixelRatio)
         renderer.shadowMap.enabled = true
         container.appendChild(renderer.domElement)
@@ -46,30 +46,38 @@ export function BattleBotAnimation() {
         controls.dampingFactor = 0.05
         controls.enableZoom = false
         controls.autoRotate = true
-        controls.autoRotateSpeed = 0.5
-        controls.target.set(-3, 0, 0) // Target left side
+        controls.autoRotateSpeed = 0.8
+        controls.target.set(0, 1, 0) // Target the robot center
         controls.enablePan = false
 
         // Lighting
-        const ambientLight = new THREE.AmbientLight(0x404040, 1)
+        const ambientLight = new THREE.AmbientLight(0x404040, 1.2)
         scene.add(ambientLight)
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5)
-        directionalLight.position.set(-1, 10, 7.5)
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 2)
+        directionalLight.position.set(5, 10, 5)
         directionalLight.castShadow = true
         scene.add(directionalLight)
 
-        // Add dramatic spotlights focused on left
-        const orangeSpotlight = new THREE.SpotLight(0xff7300, 3)
-        orangeSpotlight.position.set(-6, 10, 5)
-        orangeSpotlight.angle = Math.PI / 4
+        // Add dramatic spotlights focused on robot
+        const orangeSpotlight = new THREE.SpotLight(0xff7300, 4)
+        orangeSpotlight.position.set(-3, 8, 3)
+        orangeSpotlight.angle = Math.PI / 3
         orangeSpotlight.penumbra = 0.3
-        orangeSpotlight.target.position.set(-3, 0, 0)
+        orangeSpotlight.target.position.set(0, 1, 0)
         scene.add(orangeSpotlight)
         scene.add(orangeSpotlight.target)
 
-        // Add a floor
-        const floorGeometry = new THREE.PlaneGeometry(20, 20)
+        const yellowSpotlight = new THREE.SpotLight(0xffb700, 3)
+        yellowSpotlight.position.set(3, 8, 3)
+        yellowSpotlight.angle = Math.PI / 3
+        yellowSpotlight.penumbra = 0.3
+        yellowSpotlight.target.position.set(0, 1, 0)
+        scene.add(yellowSpotlight)
+        scene.add(yellowSpotlight.target)
+
+        // Add a smaller floor for better focus
+        const floorGeometry = new THREE.PlaneGeometry(15, 15)
         const floorMaterial = new THREE.MeshStandardMaterial({
           color: 0x333333,
           roughness: 0.8,
@@ -81,29 +89,29 @@ export function BattleBotAnimation() {
         scene.add(floor)
 
         // Add grid
-        const gridHelper = new THREE.GridHelper(20, 20, 0xff7300, 0x444444)
+        const gridHelper = new THREE.GridHelper(15, 15, 0xff7300, 0x444444)
         gridHelper.position.y = 0.01
         scene.add(gridHelper)
 
-        // Robot group positioned on left side of the scene
+        // Robot group positioned at center for better visibility
         const robotGroup = new THREE.Group()
-        robotGroup.position.set(-3, 0, 0) // Left side position within the container view
+        robotGroup.position.set(0, 0, 0) // Centered position
         scene.add(robotGroup)
 
-        // Base/chassis
-        const chassisGeometry = new THREE.BoxGeometry(2.5, 0.6, 3.5)
+        // Base/chassis - made larger for better visibility
+        const chassisGeometry = new THREE.BoxGeometry(3, 0.8, 4)
         const chassisMaterial = new THREE.MeshStandardMaterial({
           color: 0x333333,
           roughness: 0.3,
           metalness: 0.8,
         })
         const chassis = new THREE.Mesh(chassisGeometry, chassisMaterial)
-        chassis.position.y = 0.6
+        chassis.position.y = 0.8
         chassis.castShadow = true
         robotGroup.add(chassis)
 
-        // Wheels
-        const wheelGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.4, 16)
+        // Wheels - made larger
+        const wheelGeometry = new THREE.CylinderGeometry(0.6, 0.6, 0.5, 16)
         const wheelMaterial = new THREE.MeshStandardMaterial({
           color: 0x111111,
           roughness: 0.7,
@@ -113,71 +121,71 @@ export function BattleBotAnimation() {
         // Front left wheel
         const wheelFL = new THREE.Mesh(wheelGeometry, wheelMaterial)
         wheelFL.rotation.z = Math.PI / 2
-        wheelFL.position.set(-1.4, 0.5, 1.3)
+        wheelFL.position.set(-1.8, 0.6, 1.5)
         wheelFL.castShadow = true
         robotGroup.add(wheelFL)
 
         // Front right wheel
         const wheelFR = new THREE.Mesh(wheelGeometry, wheelMaterial)
         wheelFR.rotation.z = Math.PI / 2
-        wheelFR.position.set(1.4, 0.5, 1.3)
+        wheelFR.position.set(1.8, 0.6, 1.5)
         wheelFR.castShadow = true
         robotGroup.add(wheelFR)
 
         // Back left wheel
         const wheelBL = new THREE.Mesh(wheelGeometry, wheelMaterial)
         wheelBL.rotation.z = Math.PI / 2
-        wheelBL.position.set(-1.4, 0.5, -1.3)
+        wheelBL.position.set(-1.8, 0.6, -1.5)
         wheelBL.castShadow = true
         robotGroup.add(wheelBL)
 
         // Back right wheel
         const wheelBR = new THREE.Mesh(wheelGeometry, wheelMaterial)
         wheelBR.rotation.z = Math.PI / 2
-        wheelBR.position.set(1.4, 0.5, -1.3)
+        wheelBR.position.set(1.8, 0.6, -1.5)
         wheelBR.castShadow = true
         robotGroup.add(wheelBR)
 
-        // Weapon (spinning blade) - THE ORANGE PART THAT SHOULD BE UNDER TEXT
-        const bladeGeometry = new THREE.BoxGeometry(4, 0.3, 0.6)
+        // Weapon (spinning blade) - made larger and more prominent
+        const bladeGeometry = new THREE.BoxGeometry(5, 0.4, 0.8)
         const bladeMaterial = new THREE.MeshStandardMaterial({
           color: 0xff7300,
           roughness: 0.2,
           metalness: 0.9,
           emissive: 0xff7300,
-          emissiveIntensity: 0.8,
+          emissiveIntensity: 1.0,
         })
         const blade = new THREE.Mesh(bladeGeometry, bladeMaterial)
-        blade.position.set(0, 1.5, 0)
+        blade.position.set(0, 1.8, 0)
         blade.castShadow = true
         robotGroup.add(blade)
 
-        // Top armor
-        const armorGeometry = new THREE.BoxGeometry(2.2, 0.4, 2.8)
+        // Top armor - made larger
+        const armorGeometry = new THREE.BoxGeometry(2.5, 0.5, 3.2)
         const armorMaterial = new THREE.MeshStandardMaterial({
           color: 0xff9d00,
           roughness: 0.5,
           metalness: 0.7,
         })
         const armor = new THREE.Mesh(armorGeometry, armorMaterial)
-        armor.position.set(0, 1.1, 0)
+        armor.position.set(0, 1.3, 0)
         armor.castShadow = true
         robotGroup.add(armor)
 
-        // Orange lights
-        const lightGeometry = new THREE.SphereGeometry(0.12, 16, 16)
+        // Orange lights - made larger and more prominent
+        const lightGeometry = new THREE.SphereGeometry(0.15, 16, 16)
         const orangeLightMaterial = new THREE.MeshStandardMaterial({
           color: 0xff7300,
           emissive: 0xff7300,
-          emissiveIntensity: 1.2,
+          emissiveIntensity: 1.5,
         })
 
         const light1 = new THREE.Mesh(lightGeometry, orangeLightMaterial)
-        light1.position.set(0.7, 1.4, 1.0)
+        light1.position.set(0.8, 1.6, 1.2)
         robotGroup.add(light1)
 
         const light2 = new THREE.Mesh(lightGeometry, orangeLightMaterial)
-        light2.position.set(-0.7, 1.4, 1.0)
+        light2.position.set(-0.8, 1.6, 1.2)
         robotGroup.add(light2)
 
         // Animation loop
@@ -185,14 +193,15 @@ export function BattleBotAnimation() {
         const animate = () => {
           requestAnimationFrame(animate)
 
-          // Rotate the blade
-          const rotationSpeed = 0.12
+          // Rotate the blade faster for more dramatic effect
+          const rotationSpeed = 0.15
           bladeRotation += rotationSpeed
           blade.rotation.y = bladeRotation
 
-          // Pulse the lights
-          const pulseValue = Math.abs(Math.sin(Date.now() * 0.003))
-          orangeLightMaterial.emissiveIntensity = pulseValue * 1.5 + 0.5
+          // Pulse the lights more dramatically
+          const pulseValue = Math.abs(Math.sin(Date.now() * 0.004))
+          orangeLightMaterial.emissiveIntensity = pulseValue * 2 + 0.5
+          bladeMaterial.emissiveIntensity = pulseValue * 0.5 + 0.8
 
           controls.update()
           renderer.render(scene, camera)
