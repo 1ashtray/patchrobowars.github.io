@@ -14,27 +14,24 @@ export default function Home() {
       <section className="relative w-full min-h-screen overflow-hidden bg-black text-white">
         <BackgroundParticles />
 
-        {/* 3D Animation positioned on left side */}
-        <div className="absolute inset-0 z-0 lg:w-1/2">
+        {/* 3D Animation positioned only on left side, cropped for bigger bot */}
+        <div className="absolute top-1/3 left-0 w-1/2 h-2/3 z-0">
           <BattleBotAnimation />
         </div>
 
         {/* Content with split layout */}
-        <div className="absolute inset-0 z-10 flex flex-col lg:flex-row">
-          {/* Left side - Title and 3D bot space */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 md:px-6 lg:px-8">
-            <div className="text-center lg:text-left max-w-lg">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-4">
-                ROBOWARS
+        <div className="relative z-10 flex flex-col lg:flex-row h-screen">
+          {/* Left side - Title only */}
+          <div className="w-full lg:w-1/2 flex flex-col items-center justify-start px-4 md:px-6 lg:px-8 pt-20 lg:pt-32">
+            <div className="text-center max-w-lg">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
+                PATCH ROBOWARS
               </h1>
-              <p className="text-gray-300 text-lg lg:text-xl max-w-md mx-auto lg:mx-0 hidden lg:block">
-                Experience the ultimate robot combat competition. Watch the 3D battlebot in action!
-              </p>
             </div>
           </div>
 
           {/* Right side - Fight Night Box */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center px-4 md:px-6 lg:px-8 mt-8 lg:mt-0">
+          <div className="w-full lg:w-1/2 flex items-center justify-start lg:justify-center px-4 md:px-6 lg:px-8 mt-8 lg:mt-0 lg:pl-8">
             <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 md:p-8 lg:p-10 max-w-lg w-full shadow-2xl">
               {/* Fight Night Header */}
               <div className="flex items-center justify-center mb-6">
