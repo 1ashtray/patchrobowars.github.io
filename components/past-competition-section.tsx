@@ -199,17 +199,13 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <Tool className="h-5 w-5 text-orange-500 mr-2" />
                 <h3 className="text-xl font-bold text-white">Super Sucker</h3>
               </div>
-              <p className="text-gray-300 mb-4">
-                
-              </p>
-
+              <p className="text-gray-300 mb-4"></p>
             </div>
           </div>
 
@@ -222,17 +218,13 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <Zap className="h-5 w-5 text-orange-500 mr-2" />
                 <h3 className="text-xl font-bold text-white">Shreckbot</h3>
               </div>
-              <p className="text-gray-300 mb-4">
-
-              </p>
-
+              <p className="text-gray-300 mb-4"></p>
             </div>
           </div>
 
@@ -245,16 +237,13 @@ export function PastCompetitionSection() {
                 fill
                 className="object-cover"
               />
-
             </div>
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <Flame className="h-5 w-5 text-orange-500 mr-2" />
-                <h3 className="text-xl font-bold text-white">Peter the Piss Bot</h3>
+                <h3 className="text-xl font-bold text-white">Peter the Piston Bot</h3>
               </div>
-              <p className="text-gray-300 mb-4">
-
-              </p>
+              <p className="text-gray-300 mb-4"></p>
             </div>
           </div>
         </div>

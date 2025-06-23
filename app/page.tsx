@@ -1,37 +1,92 @@
 import { BattleBotAnimation } from "@/components/battle-bot-animation"
 import { BackgroundParticles } from "@/components/background-particles"
-import { CountdownTimer } from "@/components/countdown-timer"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
-import { Info, MapPin } from "lucide-react"
+import { Info, MapPin, Calendar, Clock, Zap } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  // Event date - set this to your actual event date
-  const eventDate = new Date("2025-07-05T20:00:00")
-
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with 3D Animation */}
+      {/* Hero Section with 3D Animation - Split Layout */}
       <section className="relative w-full min-h-screen overflow-hidden bg-black text-white">
         <BackgroundParticles />
-        <div className="absolute inset-0 z-0">
+
+        {/* 3D Animation positioned on left side */}
+        <div className="absolute inset-0 z-0 lg:w-1/2">
           <BattleBotAnimation />
         </div>
 
-        {/* Title at top */}
-        <div className="absolute top-0 left-0 right-0 z-10 pt-24 px-4 md:px-6">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient text-center">
-            ROBOWARS
-          </h1>
-        </div>
+        {/* Content with split layout */}
+        <div className="absolute inset-0 z-10 flex flex-col lg:flex-row">
+          {/* Left side - Title and 3D bot space */}
+          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 md:px-6 lg:px-8">
+            <div className="text-center lg:text-left max-w-lg">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-4">
+                ROBOWARS
+              </h1>
+              <p className="text-gray-300 text-lg lg:text-xl max-w-md mx-auto lg:mx-0 hidden lg:block">
+                Experience the ultimate robot combat competition. Watch the 3D battlebot in action!
+              </p>
+            </div>
+          </div>
 
-        {/* Countdown centered at bottom */}
-        <div className="absolute bottom-20 left-0 right-0 z-10 flex justify-center">
-          <div className="bg-black/40 backdrop-blur-sm border border-orange-900/30 rounded-xl p-4 w-full max-w-xs">
-            <h3 className="text-sm font-medium mb-2 text-orange-400 text-center">Fight Night Countdown</h3>
-            <CountdownTimer targetDate={eventDate} />
+          {/* Right side - Fight Night Box */}
+          <div className="w-full lg:w-1/2 flex items-center justify-center px-4 md:px-6 lg:px-8 mt-8 lg:mt-0">
+            <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 md:p-8 lg:p-10 max-w-lg w-full shadow-2xl">
+              {/* Fight Night Header */}
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full p-3 mr-4">
+                  <Zap className="h-6 w-6 md:h-8 md:w-8 text-black" />
+                </div>
+                <div className="text-center">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">FIGHT NIGHT</h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
+                </div>
+              </div>
+
+              {/* Event Details */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                  <Calendar className="h-5 w-5 text-orange-400 mb-2" />
+                  <span className="text-white font-semibold text-sm">July 5th</span>
+                  <span className="text-gray-300 text-xs">2025</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                  <Clock className="h-5 w-5 text-orange-400 mb-2" />
+                  <span className="text-white font-semibold text-sm">5:00 PM</span>
+                  <span className="text-gray-300 text-xs">Doors Open</span>
+                </div>
+                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                  <MapPin className="h-5 w-5 text-orange-400 mb-2" />
+                  <span className="text-white font-semibold text-sm">Dogpatch</span>
+                  <span className="text-gray-300 text-xs">Labs</span>
+                </div>
+              </div>
+
+              {/* Main CTA */}
+              <div className="text-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl mb-4 w-full shadow-lg"
+                >
+                  <a
+                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register for Fight Night
+                  </a>
+                </Button>
+                <p className="text-gray-300 text-sm">
+                  <span className="text-orange-400 font-semibold">Free Admission</span> • Limited Seating • Registration
+                  Required
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -68,17 +123,93 @@ export default function Home() {
             </p>
 
             {/* Fight Night Location */}
-            <div className="bg-black/40 rounded-xl p-6 border border-orange-900/20 max-w-2xl">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-orange-900/30 rounded-full p-3 mr-4">
-                  <MapPin className="h-6 w-6 text-orange-500" />
+          </div>
+        </div>
+      </section>
+
+      {/* Event Details Section */}
+      <section id="event-details" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center mb-12">
+            <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
+              <Calendar className="h-6 w-6 text-orange-500" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Fight Night Details</h2>
+            <div className="w-20 h-1 bg-orange-600 mb-6"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Date & Time */}
+              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20">
+                <div className="flex items-center mb-6">
+                  <div className="bg-orange-900/30 rounded-full p-3 mr-4">
+                    <Calendar className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">When</h3>
                 </div>
-                <h3 className="text-xl font-bold text-white">Fight Night Location</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
+                    <p className="text-gray-300">Mark your calendars for the ultimate robot showdown!</p>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="h-5 w-5 text-orange-500 mr-2" />
+                    <p className="text-gray-300">
+                      <span className="text-white font-semibold">5:00 PM</span> - Doors open & registration
+                    </p>
+                  </div>
+                  <div className="bg-orange-900/20 rounded-lg p-4 mt-4">
+                    <p className="text-sm text-gray-300">
+                      <span className="text-orange-400 font-semibold">Note:</span> Arrive early to secure the best
+                      viewing spots and witness the pre-battle preparations!
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p className="text-gray-300 text-lg">
-                The ultimate showdown will take place at{" "}
-                <span className="text-orange-400 font-semibold">Dogpatch Labs</span>, where teams will battle it out in
-                an epic arena of destruction and engineering prowess.
+
+              {/* Location Details */}
+              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20">
+                <div className="flex items-center mb-6">
+                  <div className="bg-orange-900/30 rounded-full p-3 mr-4">
+                    <MapPin className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Where</h3>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
+                    <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <p>• State-of-the-art venue with professional arena setup</p>
+                    <p>• Spectator seating with optimal viewing angles</p>
+                    <p>• Food and refreshments available</p>
+                    <p>• Accessible location with public transport links</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* What to Expect */}
+
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <Button
+                asChild
+                size="lg"
+                className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white font-bold px-12 py-4 text-xl"
+              >
+                <a
+                  href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Your Tickets Now
+                </a>
+              </Button>
+              <p className="text-gray-400 text-sm mt-4">
+                Limited seating available • Free admission • Registration required
               </p>
             </div>
           </div>

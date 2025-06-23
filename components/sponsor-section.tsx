@@ -1,20 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Award, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 export function SponsorSection() {
   return (
     <section id="sponsors" className="py-20 bg-gradient-to-b from-black to-gray-900">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
-            <Award className="h-6 w-6 text-orange-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What is Patch?</h2>
-          <div className="w-20 h-1 bg-orange-600 mb-6"></div>
-        </div>
-
         {/* Main Sponsor Showcase */}
         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-black via-gray-900 to-black border border-orange-900/30">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
