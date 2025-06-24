@@ -4,6 +4,7 @@ import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
+import { BuildDaySlideshow } from "@/components/build-day-slideshow"
 import { Info, MapPin, Calendar, Clock, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -123,6 +124,19 @@ export default function Home() {
               access to 3D printers. Participants design and build their own remote-controlled machines to fight and
               disable opponents in a thrilling display of strategy, engineering, and combat.
             </p>
+
+            {/* Build Day Slideshow */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Behind the Scenes: Build Days</h3>
+              <BuildDaySlideshow />
+              <div className="text-center mt-8">
+                <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+                  From initial design concepts to final assembly, our build days are collaborative workshops where
+                  creativity meets engineering. Teams work together in our dedicated workspace, learning from each other
+                  and bringing their robot visions to life.
+                </p>
+              </div>
+            </div>
 
             {/* Fight Night Location */}
           </div>
