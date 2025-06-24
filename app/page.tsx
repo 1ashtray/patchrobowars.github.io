@@ -5,7 +5,7 @@ import { PastCompetitionSection } from "@/components/past-competition-section"
 import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
 import { BuildDaySlideshow } from "@/components/build-day-slideshow"
-import { Info, MapPin, Calendar, Clock, Zap } from "lucide-react"
+import { Info, MapPin, Calendar, Clock, Zap, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -66,14 +66,16 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-6 py-4 text-lg mb-4 w-full shadow-lg"
+                className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-6 py-4 text-lg mb-4 w-full shadow-lg border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
               >
                 <a
                   href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2"
                 >
                   Register for Fight Night
+                  <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
               <p className="text-gray-300 text-sm">
@@ -135,14 +137,16 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-6 text-xl mb-4 w-full shadow-lg"
+                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-6 text-xl mb-4 w-full shadow-lg border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
                 >
                   <a
                     href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3"
                   >
                     Register for Fight Night
+                    <ArrowRight className="h-6 w-6" />
                   </a>
                 </Button>
                 <p className="text-gray-300 text-sm">
@@ -275,14 +279,16 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white font-bold px-12 py-4 text-xl"
+                className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white font-bold px-12 py-4 text-xl border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
               >
                 <a
                   href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3"
                 >
                   Get Your Tickets Now
+                  <ArrowRight className="h-6 w-6" />
                 </a>
               </Button>
               <p className="text-gray-400 text-sm mt-4">
