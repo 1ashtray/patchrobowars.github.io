@@ -11,47 +11,108 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with 3D Animation - Split Layout */}
+      {/* Hero Section - Mobile: Fight Night Box Only, Desktop: Split Layout */}
       <section className="relative w-full min-h-screen overflow-hidden bg-black text-white">
         <BackgroundParticles />
 
-        {/* 3D Animation positioned to span left side, lower under text */}
-        <div className="absolute top-1/3 left-0 w-1/2 h-2/3 z-0">
+        {/* 3D Animation - Hidden on mobile, positioned for desktop */}
+        <div className="hidden lg:block absolute top-1/3 left-0 w-1/2 h-2/3 z-0">
           <BattleBotAnimation />
         </div>
 
-        {/* Content with split layout */}
-        <div className="absolute inset-0 z-10 flex flex-col lg:flex-row">
+        {/* Mobile Layout - Centered Fight Night Box */}
+        <div className="lg:hidden absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+          {/* Mobile Title */}
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-4">
+              PATCH ROBOWARS
+            </h1>
+          </div>
+
+          {/* Fight Night Box - Mobile */}
+          <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+            {/* Fight Night Header */}
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full p-3 mr-3">
+                <Zap className="h-6 w-6 text-black" />
+              </div>
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-white mb-1">FIGHT NIGHT</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
+              </div>
+            </div>
+
+            {/* Event Details - Mobile */}
+            <div className="grid grid-cols-3 gap-2 mb-6">
+              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                <Calendar className="h-4 w-4 text-orange-400 mb-1" />
+                <span className="text-white font-semibold text-xs">July 5th</span>
+                <span className="text-gray-300 text-xs">2025</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                <Clock className="h-4 w-4 text-orange-400 mb-1" />
+                <span className="text-white font-semibold text-xs">5:00 PM</span>
+                <span className="text-gray-300 text-xs">Doors Open</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
+                <MapPin className="h-4 w-4 text-orange-400 mb-1" />
+                <span className="text-white font-semibold text-xs">Dogpatch</span>
+                <span className="text-gray-300 text-xs">Labs</span>
+              </div>
+            </div>
+
+            {/* Main CTA - Mobile */}
+            <div className="text-center">
+              <Button
+                asChild
+                size="lg"
+                className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-6 py-4 text-lg mb-4 w-full shadow-lg"
+              >
+                <a
+                  href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register for Fight Night
+                </a>
+              </Button>
+              <p className="text-gray-300 text-sm">
+                <span className="text-orange-400 font-semibold">Free Admission</span> • Limited Seating
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Split Layout with Animation */}
+        <div className="hidden lg:flex absolute inset-0 z-10 flex-row">
           {/* Left side - Title and 3D bot space */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-start px-4 md:px-6 lg:px-8 pt-20 lg:pt-32">
+          <div className="w-1/2 flex flex-col items-center justify-start px-8 pt-32">
             <div className="text-center max-w-lg mb-16">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
+              <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
                 PATCH ROBOWARS
               </h1>
             </div>
 
             {/* Space for 3D animation */}
-            <div className="w-full h-64 md:h-80 lg:h-96 relative">
-              {/* 3D Animation will appear here via absolute positioning */}
-            </div>
+            <div className="w-full h-96 relative">{/* 3D Animation will appear here via absolute positioning */}</div>
           </div>
 
           {/* Right side - Fight Night Box */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center px-4 md:px-6 lg:px-8 mt-8 lg:mt-0">
-            <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 md:p-8 lg:p-10 max-w-lg w-full shadow-2xl">
+          <div className="w-1/2 flex items-center justify-center px-8">
+            <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-10 max-w-lg w-full shadow-2xl">
               {/* Fight Night Header */}
               <div className="flex items-center justify-center mb-6">
                 <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full p-3 mr-4">
-                  <Zap className="h-6 w-6 md:h-8 md:w-8 text-black" />
+                  <Zap className="h-8 w-8 text-black" />
                 </div>
                 <div className="text-center">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">FIGHT NIGHT</h2>
+                  <h2 className="text-4xl font-bold text-white mb-1">FIGHT NIGHT</h2>
                   <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
                 </div>
               </div>
 
               {/* Event Details */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-3 gap-3 mb-6">
                 <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
                   <Calendar className="h-5 w-5 text-orange-400 mb-2" />
                   <span className="text-white font-semibold text-sm">July 5th</span>
@@ -74,7 +135,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl mb-4 w-full shadow-lg"
+                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-6 text-xl mb-4 w-full shadow-lg"
                 >
                   <a
                     href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
