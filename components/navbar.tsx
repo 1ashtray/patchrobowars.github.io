@@ -20,7 +20,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center space-x-3">
             <Image src="/robowars-logo.png" alt="RoboWars Logo" width={40} height={40} className="object-contain" />
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">
-              ROBOWARS
+              PATCH ROBOWARS
             </span>
           </Link>
 
@@ -29,18 +29,24 @@ export function Navbar() {
             <Link href="/#about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
+            <Link href="/#event-details" className="text-gray-300 hover:text-white transition-colors">
+              Fight Night
+            </Link>
             <Link href="/#fight-rules" className="text-gray-300 hover:text-white transition-colors">
               Fight Rules
-            </Link>
-            <Link href="/#sponsors" className="text-gray-300 hover:text-white transition-colors">
-              Sponsors
             </Link>
             <Button
               asChild
               variant="default"
-              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[120px]"
+              className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white min-w-[140px]"
             >
-              <a href="mailto:operations@patchrobowars.com">Contact</a>
+              <a
+                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Tickets
+              </a>
             </Button>
           </nav>
 
@@ -59,26 +65,31 @@ export function Navbar() {
               About
             </Link>
             <Link
+              href="/#event-details"
+              className="text-gray-300 hover:text-white transition-colors py-2"
+              onClick={toggleMenu}
+            >
+              Fight Night
+            </Link>
+            <Link
               href="/#fight-rules"
               className="text-gray-300 hover:text-white transition-colors py-2"
               onClick={toggleMenu}
             >
               Fight Rules
             </Link>
-            <Link
-              href="/#sponsors"
-              className="text-gray-300 hover:text-white transition-colors py-2"
-              onClick={toggleMenu}
-            >
-              Sponsors
-            </Link>
             <Button
               asChild
               variant="default"
               className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white w-full"
             >
-              <a href="mailto:operations@patchrobowars.com" onClick={toggleMenu}>
-                Contact
+              <a
+                href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={toggleMenu}
+              >
+                Get Tickets
               </a>
             </Button>
           </div>
