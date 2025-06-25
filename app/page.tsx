@@ -55,65 +55,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* Fight Night Event Details */}
-          <div className="w-full">
-            <div className="bg-black/80 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8 md:p-12 shadow-2xl space-y-8">
-              <div className="text-center space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-white">Fight Night 2025</h3>
-                <p className="text-gray-300 max-w-2xl mx-auto">
-                  Join us for our biggest event of the year! Watch these custom-built robots battle for supremacy.
-                  <span className="text-orange-400 font-semibold"> This is the main event you don't want to miss.</span>
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center space-y-3">
-                  <Calendar className="h-8 w-8 text-orange-400 mx-auto" />
-                  <div>
-                    <p className="text-white font-bold text-lg">July 5th, 2025</p>
-                    <p className="text-gray-400 text-sm">Saturday</p>
-                  </div>
-                </div>
-                <div className="text-center space-y-3">
-                  <Clock className="h-8 w-8 text-orange-400 mx-auto" />
-                  <div>
-                    <p className="text-white font-bold text-lg">5:00 PM</p>
-                    <p className="text-gray-400 text-sm">Doors Open</p>
-                  </div>
-                </div>
-                <div className="text-center space-y-3">
-                  <MapPin className="h-8 w-8 text-orange-400 mx-auto" />
-                  <div>
-                    <p className="text-white font-bold text-lg">Dogpatch Labs</p>
-                    <p className="text-gray-400 text-sm">Dublin</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Secondary CTA */}
-              <div className="space-y-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold py-6 text-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <a
-                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3"
-                  >
-                    <Ticket className="h-6 w-6" />
-                    Reserve Your Spot
-                  </a>
-                </Button>
-                <p className="text-gray-400 text-sm text-center">
-                  Free admission • Limited seating • Registration required
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -222,19 +163,6 @@ export default function Home() {
                         <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
                         <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-orange-900/20 rounded-lg p-4">
-                  <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
-                    <div className="space-y-2">
-                      <p>• State-of-the-art venue with professional arena setup</p>
-                      <p>• Spectator seating with optimal viewing angles</p>
-                    </div>
-                    <div className="space-y-2">
-                      <p>• Food and refreshments available</p>
-                      <p>• Accessible location with public transport links</p>
                     </div>
                   </div>
                 </div>
