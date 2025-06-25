@@ -23,6 +23,21 @@ export const metadata = {
         type: "image/png",
       },
       {
+        url: "/icon-48.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        url: "/icon-96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/icon-144.png",
+        sizes: "144x144",
+        type: "image/png",
+      },
+      {
         url: "/icon-192.png",
         sizes: "192x192",
         type: "image/png",
@@ -56,6 +71,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/icon-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/icon-96.png" type="image/png" sizes="96x96" />
+        <link rel="icon" href="/icon-144.png" type="image/png" sizes="144x144" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ea580c" />
