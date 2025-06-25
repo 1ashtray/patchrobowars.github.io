@@ -1,285 +1,38 @@
-import { BattleBotAnimation } from "@/components/battle-bot-animation"
 import { BackgroundParticles } from "@/components/background-particles"
 import { SponsorSection } from "@/components/sponsor-section"
 import { PastCompetitionSection } from "@/components/past-competition-section"
 import { FightRulesSection } from "@/components/fight-rules-section"
 import { JudgingCriteriaSection } from "@/components/judging-criteria-section"
 import { BuildDaySlideshow } from "@/components/build-day-slideshow"
-import { Info, MapPin, Calendar, Clock, Zap, ArrowRight } from "lucide-react"
+import { Info, MapPin, Calendar, Clock, Ticket, ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Mobile: Fight Night Box Only, Desktop: Split Layout */}
-      <section className="relative w-full min-h-screen overflow-hidden bg-black text-white">
+      {/* Hero Section - Clean, Modern, Centered */}
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white py-20">
         <BackgroundParticles />
 
-        {/* 3D Animation - Hidden on mobile, positioned for desktop */}
-        <div className="hidden lg:block absolute top-1/3 left-0 w-1/2 h-2/3 z-0">
-          <BattleBotAnimation />
-        </div>
-
-        {/* Mobile Layout - Centered Fight Night Box */}
-        <div className="lg:hidden absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
-          {/* Mobile Title */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient mb-4">
-              PATCH ROBOWARS
-            </h1>
-          </div>
-
-          {/* Fight Night Box - Mobile */}
-          <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
-            {/* Fight Night Header */}
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full p-3 mr-3">
-                <Zap className="h-6 w-6 text-black" />
-              </div>
-              <div className="text-center">
-                <h2 className="text-2xl font-bold text-white mb-1">FIGHT NIGHT</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
-              </div>
-            </div>
-
-            {/* Event Details - Mobile */}
-            <div className="grid grid-cols-3 gap-2 mb-6">
-              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                <Calendar className="h-4 w-4 text-orange-400 mb-1" />
-                <span className="text-white font-semibold text-xs">July 5th</span>
-                <span className="text-gray-300 text-xs">2025</span>
-              </div>
-              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                <Clock className="h-4 w-4 text-orange-400 mb-1" />
-                <span className="text-white font-semibold text-xs">5:00 PM</span>
-                <span className="text-gray-300 text-xs">Doors Open</span>
-              </div>
-              <div className="flex flex-col items-center text-center p-2 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                <MapPin className="h-4 w-4 text-orange-400 mb-1" />
-                <span className="text-white font-semibold text-xs">Dogpatch</span>
-                <span className="text-gray-300 text-xs">Labs</span>
-              </div>
-            </div>
-
-            {/* Main CTA - Mobile */}
-            <div className="text-center">
-              <Button
-                asChild
-                size="lg"
-                className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-6 py-4 text-lg mb-4 w-full shadow-lg border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
-              >
-                <a
-                  href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  Register for Fight Night
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
-              <p className="text-gray-300 text-sm">
-                <span className="text-orange-400 font-semibold">Free Admission</span> • Limited Seating
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Layout - Split Layout with Animation */}
-        <div className="hidden lg:flex absolute inset-0 z-10 flex-row">
-          {/* Left side - Title and 3D bot space */}
-          <div className="w-1/2 flex flex-col items-center justify-start px-8 pt-32">
-            <div className="text-center max-w-lg mb-16">
-              <h1 className="text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 animate-gradient">
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto w-full space-y-12">
+          {/* Main Event Title */}
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500">
                 PATCH ROBOWARS
-              </h1>
+              </span>
+            </h1>
+            <div className="space-y-2">
+              <p className="text-orange-400 font-semibold text-xl md:text-2xl tracking-wide">PRESENTS</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white">FIGHT NIGHT 2025</h2>
             </div>
 
-            {/* Space for 3D animation */}
-            <div className="w-full h-96 relative">{/* 3D Animation will appear here via absolute positioning */}</div>
-          </div>
-
-          {/* Right side - Fight Night Box */}
-          <div className="w-1/2 flex items-center justify-center px-8">
-            <div className="bg-black/70 backdrop-blur-md border-2 border-orange-500/50 rounded-2xl p-10 max-w-lg w-full shadow-2xl">
-              {/* Fight Night Header */}
-              <div className="flex items-center justify-center mb-6">
-                <div className="bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full p-3 mr-4">
-                  <Zap className="h-8 w-8 text-black" />
-                </div>
-                <div className="text-center">
-                  <h2 className="text-4xl font-bold text-white mb-1">FIGHT NIGHT</h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
-                </div>
-              </div>
-
-              {/* Event Details */}
-              <div className="grid grid-cols-3 gap-3 mb-6">
-                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                  <Calendar className="h-5 w-5 text-orange-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">July 5th</span>
-                  <span className="text-gray-300 text-xs">2025</span>
-                </div>
-                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                  <Clock className="h-5 w-5 text-orange-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">5:00 PM</span>
-                  <span className="text-gray-300 text-xs">Doors Open</span>
-                </div>
-                <div className="flex flex-col items-center text-center p-3 bg-orange-900/20 rounded-xl border border-orange-500/30">
-                  <MapPin className="h-5 w-5 text-orange-400 mb-2" />
-                  <span className="text-white font-semibold text-sm">Dogpatch</span>
-                  <span className="text-gray-300 text-xs">Labs</span>
-                </div>
-              </div>
-
-              {/* Main CTA */}
-              <div className="text-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="mechanical-btn bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-6 text-xl mb-4 w-full shadow-lg border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
-                >
-                  <a
-                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3"
-                  >
-                    Register for Fight Night
-                    <ArrowRight className="h-6 w-6" />
-                  </a>
-                </Button>
-                <p className="text-gray-300 text-sm">
-                  <span className="text-orange-400 font-semibold">Free Admission</span> • Limited Seating • Registration
-                  Required
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Down arrow at very bottom */}
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center z-10">
-          <a href="#about" className="animate-bounce">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
-        </div>
-      </section>
-
-      {/* About Section - simplified */}
-      <section id="about" className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center text-center">
-            <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
-              <Info className="h-6 w-6 text-orange-500" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What is Patch RoboWars?</h2>
-            <div className="w-20 h-1 bg-orange-600 mb-6"></div>
-            <p className="max-w-3xl text-gray-300 text-lg mb-8">
-              Patch RoboWars is a student-run battlebot competition where anyone from any background can participate.
-              Each team receives a transmitter/receiver set, funding to build their robot, dedicated workspace, and
-              access to 3D printers. Participants design and build their own remote-controlled machines to fight and
-              disable opponents in a thrilling display of strategy, engineering, and combat.
-            </p>
-
-            {/* Build Day Slideshow */}
-            <div className="mt-12">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Behind the Scenes: Build Days</h3>
-              <BuildDaySlideshow />
-              <div className="text-center mt-8">
-                <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-                  From initial design concepts to final assembly, our build days are collaborative workshops where
-                  creativity meets engineering. Teams work together in our dedicated workspace, learning from each other
-                  and bringing their robot visions to life.
-                </p>
-              </div>
-            </div>
-
-            {/* Fight Night Location */}
-          </div>
-        </div>
-      </section>
-
-      {/* Event Details Section */}
-      <section id="event-details" className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center text-center mb-12">
-            <div className="inline-block p-2 bg-orange-900/20 rounded-lg mb-4">
-              <Calendar className="h-6 w-6 text-orange-500" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Fight Night Details</h2>
-            <div className="w-20 h-1 bg-orange-600 mb-6"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Date & Time */}
-              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20">
-                <div className="flex items-center mb-6">
-                  <div className="bg-orange-900/30 rounded-full p-3 mr-4">
-                    <Calendar className="h-6 w-6 text-orange-500" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">When</h3>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
-                    <p className="text-gray-300">Mark your calendars for the ultimate robot showdown!</p>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="h-5 w-5 text-orange-500 mr-2" />
-                    <p className="text-gray-300">
-                      <span className="text-white font-semibold">5:00 PM</span> - Doors open & registration
-                    </p>
-                  </div>
-                  <div className="bg-orange-900/20 rounded-lg p-4 mt-4">
-                    <p className="text-sm text-gray-300">
-                      <span className="text-orange-400 font-semibold">Note:</span> Arrive early to secure the best
-                      viewing spots and witness the pre-battle preparations!
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Location Details */}
-              <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20">
-                <div className="flex items-center mb-6">
-                  <div className="bg-orange-900/30 rounded-full p-3 mr-4">
-                    <MapPin className="h-6 w-6 text-orange-500" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">Where</h3>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
-                    <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
-                  </div>
-                  <div className="space-y-2 text-sm text-gray-300">
-                    <p>• State-of-the-art venue with professional arena setup</p>
-                    <p>• Spectator seating with optimal viewing angles</p>
-                    <p>• Food and refreshments available</p>
-                    <p>• Accessible location with public transport links</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* What to Expect */}
-
-            {/* Call to Action */}
-            <div className="text-center mt-12">
+            {/* Get Tickets Button */}
+            <div className="pt-4">
               <Button
                 asChild
                 size="lg"
-                className="mechanical-btn bg-orange-600 hover:bg-orange-700 text-white font-bold px-12 py-4 text-xl border-2 border-orange-400/50 hover:border-orange-300 transition-all duration-300 hover:shadow-orange-500/25 hover:shadow-xl"
+                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <a
                   href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
@@ -287,13 +40,225 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3"
                 >
-                  Get Your Tickets Now
-                  <ArrowRight className="h-6 w-6" />
+                  <Ticket className="h-6 w-6" />
+                  Get Free Tickets Now
                 </a>
               </Button>
-              <p className="text-gray-400 text-sm mt-4">
-                Limited seating available • Free admission • Registration required
+            </div>
+          </div>
+
+          {/* Build Context Slideshow */}
+          <div className="w-full">
+            <div className="bg-black/60 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 md:p-8 space-y-6">
+              <div className="w-full max-w-5xl mx-auto">
+                <BuildDaySlideshow />
+              </div>
+            </div>
+          </div>
+
+          {/* Fight Night Event Details */}
+          <div className="w-full">
+            <div className="bg-black/80 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8 md:p-12 shadow-2xl space-y-8">
+              <div className="text-center space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">Fight Night 2025</h3>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Join us for our biggest event of the year! Watch these custom-built robots battle for supremacy.
+                  <span className="text-orange-400 font-semibold"> This is the main event you don't want to miss.</span>
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center space-y-3">
+                  <Calendar className="h-8 w-8 text-orange-400 mx-auto" />
+                  <div>
+                    <p className="text-white font-bold text-lg">July 5th, 2025</p>
+                    <p className="text-gray-400 text-sm">Saturday</p>
+                  </div>
+                </div>
+                <div className="text-center space-y-3">
+                  <Clock className="h-8 w-8 text-orange-400 mx-auto" />
+                  <div>
+                    <p className="text-white font-bold text-lg">5:00 PM</p>
+                    <p className="text-gray-400 text-sm">Doors Open</p>
+                  </div>
+                </div>
+                <div className="text-center space-y-3">
+                  <MapPin className="h-8 w-8 text-orange-400 mx-auto" />
+                  <div>
+                    <p className="text-white font-bold text-lg">Dogpatch Labs</p>
+                    <p className="text-gray-400 text-sm">Dublin</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Secondary CTA */}
+              <div className="space-y-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold py-6 text-xl border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <a
+                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Ticket className="h-6 w-6" />
+                    Reserve Your Spot
+                  </a>
+                </Button>
+                <p className="text-gray-400 text-sm text-center">
+                  Free admission • Limited seating • Registration required
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+          <div className="flex flex-col items-center space-y-2">
+            <p className="text-xs text-gray-400">Learn More</p>
+            <ArrowDown className="h-6 w-6 text-orange-400 animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center text-center space-y-8">
+            <div className="space-y-6">
+              <div className="inline-block p-2 bg-orange-900/20 rounded-lg">
+                <Info className="h-6 w-6 text-orange-500" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">What is Patch RoboWars?</h2>
+              <div className="w-20 h-1 bg-orange-600"></div>
+              <p className="max-w-3xl text-gray-300 text-lg leading-relaxed">
+                Patch RoboWars is a student-run battlebot competition where anyone from any background can participate.
+                Each team receives a transmitter/receiver set, funding to build their robot, dedicated workspace, and
+                access to 3D printers. Participants design and build their own remote-controlled machines to fight and
+                disable opponents in a thrilling display of strategy, engineering, and combat.
               </p>
+            </div>
+
+            {/* Participant Benefits */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+              <div className="bg-black/40 rounded-xl p-6 flex items-start space-x-4 border border-orange-900/20">
+                <div className="bg-orange-900/30 rounded-full p-3 flex-shrink-0">
+                  <Calendar className="h-6 w-6 text-orange-500" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold text-white">Weekly Build Sessions</h3>
+                  <p className="text-gray-300">
+                    Regular workshops at Dogpatch Labs with access to tools, 3D printers, and expert guidance.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-black/40 rounded-xl p-6 flex items-start space-x-4 border border-orange-900/20">
+                <div className="bg-orange-900/30 rounded-full p-3 flex-shrink-0">
+                  <Ticket className="h-6 w-6 text-orange-500" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold text-white">Everything Provided</h3>
+                  <p className="text-gray-300">
+                    Transmitter, receiver, batteries, funding, and workspace - just bring your creativity!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Details Section */}
+      <section id="event-details" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container px-4 md:px-6">
+          <div className="space-y-12">
+            <div className="flex flex-col items-center text-center space-y-6">
+              <div className="inline-block p-2 bg-orange-900/20 rounded-lg">
+                <Calendar className="h-6 w-6 text-orange-500" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Fight Night Details</h2>
+              <div className="w-20 h-1 bg-orange-600"></div>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Date & Time */}
+                <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20 space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-orange-900/30 rounded-full p-3">
+                      <Calendar className="h-6 w-6 text-orange-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">When</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
+                      <p className="text-gray-300">Mark your calendars for the ultimate robot showdown!</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Clock className="h-5 w-5 text-orange-500" />
+                      <p className="text-gray-300">
+                        <span className="text-white font-semibold">5:00 PM</span> - Doors open & registration
+                      </p>
+                    </div>
+                    <div className="bg-orange-900/20 rounded-lg p-4">
+                      <p className="text-sm text-gray-300">
+                        <span className="text-orange-400 font-semibold">Note:</span> Arrive early to secure the best
+                        viewing spots and witness the pre-battle preparations!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Location Details */}
+                <div className="bg-black/40 rounded-xl p-8 border border-orange-900/20 space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-orange-900/30 rounded-full p-3">
+                      <MapPin className="h-6 w-6 text-orange-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">Where</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <p className="text-orange-400 font-semibold text-lg">Dogpatch Labs</p>
+                      <p className="text-gray-300">The CHQ Building, Custom House Quay, North Dock, Dublin 1</p>
+                    </div>
+                    <div className="space-y-2 text-sm text-gray-300">
+                      <p>• State-of-the-art venue with professional arena setup</p>
+                      <p>• Spectator seating with optimal viewing angles</p>
+                      <p>• Food and refreshments available</p>
+                      <p>• Accessible location with public transport links</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Call to Action */}
+              <div className="text-center mt-12 space-y-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-bold px-12 py-4 text-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <a
+                    href="https://www.eventbrite.ie/e/1408425351139?aff=oddtdtcreator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Ticket className="h-6 w-6" />
+                    Reserve Your Spot
+                  </a>
+                </Button>
+                <p className="text-gray-400 text-sm">
+                  Limited seating available • Free admission • Registration required
+                </p>
+              </div>
             </div>
           </div>
         </div>
