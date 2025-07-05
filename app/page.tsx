@@ -140,11 +140,19 @@ export default function Home() {
                     <div className="space-y-4">
                       <div className="space-y-2">
                         <p className="text-orange-400 font-semibold text-lg">Saturday, July 5th, 2025</p>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="h-5 w-5 text-orange-500" />
-                          <p className="text-gray-300">
-                            <span className="text-white font-semibold">5:00 PM</span> - Doors open
-                          </p>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <Clock className="h-5 w-5 text-orange-500" />
+                            <p className="text-gray-300">
+                              <span className="text-white font-semibold">4:30 PM</span> - Doors open
+                            </p>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Clock className="h-5 w-5 text-orange-500" />
+                            <p className="text-gray-300">
+                              <span className="text-white font-semibold">5:00 PM</span> - Kick off
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
